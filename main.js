@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Graphic Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-icons/dist/umd/lucide.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .project-hover {
+            transition: transform 0.3s ease;
+        }
+        .project-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-normal tracking-normal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">[Your Name]</a>
+            <div class="space-x-4">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 bg-gradient-to-br from-blue-100 to-purple-100">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-600">[Your Name]</span></h1>
+                <p class="text-xl mb-6">Graphic Designer | Brand Storyteller | Creative Thinker</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#portfolio" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">View My Work</a>
+                    <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition">Hire Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                <img src="/api/placeholder/400/400" alt="Designer Profile" class="rounded-full w-64 h-64 object-cover shadow-lg">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg mb-4">
+                    I'm a passionate graphic designer with [X] years of experience creating compelling visual stories. 
+                    My approach combines creative thinking with strategic design to deliver impactful visual solutions.
+                </p>
+                <p class="text-lg">
+                    From branding and digital illustrations to UI/UX design, I love transforming ideas into stunning visual experiences 
+                    that resonate with audiences and drive meaningful connections.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">My Portfolio</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden project-hover">
+                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Brand Identity Design</h3>
+                        <p class="text-gray-600 mb-4">Complete branding solution for a tech startup</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden project-hover">
+                    <img src="/api/placeholder/400/300" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Digital Illustration</h3>
+                        <p class="text-gray-600 mb-4">Illustration series for marketing campaign</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden project-hover">
+                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                        <p class="text-gray-600 mb-4">Mobile app interface design</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">My Skills</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i data-lucide="palette" class="w-12 h-12 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="text-xl font-semibold mb-2">Brand Design</h3>
+                    <p>Creating unique and memorable brand identities</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i data-lucide="pen-tool" class="w-12 h-12 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="text-xl font-semibold mb-2">Digital Illustration</h3>
+                    <p>Crafting detailed and expressive illustrations</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i data-lucide="layout-template" class="w-12 h-12 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                    <p>Designing intuitive and user-friendly interfaces</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
+            <p class="text-xl mb-8">Interested in creating something awesome? Drop me a message!</p>
+            <form class="max-w-lg mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full mb-4 p-3 rounded text-gray-800" required>
+                <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 rounded text-gray-800" required>
+                <textarea placeholder="Your Message" class="w-full mb-4 p-3 rounded text-gray-800" rows="4" required></textarea>
+                <button type="submit" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-blue-400 transition"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i data-lucide="behance"></i></a>
+            </div>
+            <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
