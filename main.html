@@ -44,28 +44,86 @@
                 </div>
             </div>
             <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                <img src="/api/placeholder/400/400" alt="Designer Profile" class="rounded-full w-64 h-64 object-cover shadow-lg">
+                <img src="src/picture.jpg" alt="Designer Profile" class="rounded-full w-64 h-64 object-cover shadow-lg">
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg mb-4">
-                    I’m a passionate graphic designer and UI/UX enthusiast with practical experience from my studies. Throughout my time in school,
-                     I’ve learned the basics of design and how to create user-friendly experiences. I mix creativity with strategy to create designs 
-                     that not only look great but also make a real impact.
-                </p>
-                <p class="text-lg">
-                    From branding to digital illustrations and UI/UX design, I enjoy turning ideas into visuals that connect with people and leave a lasting impression.
-                </p>
+    <section id="about" class="py-20 text-white" style="background-image: url('src/picture1.jpg'); background-size: 50%; background-position: center; background-repeat: no-repeat;">
+        <div class="container mx-auto px-4 relative">
+            <!-- Hidden Checkbox to toggle visibility -->
+            <input type="checkbox" id="toggle-about" class="hidden" />
+    
+            <!-- Slideshow Wrapper -->
+            <div class="relative max-w-3xl mx-auto">
+                <!-- About Me Content (Visible when checkbox is checked) -->
+                <div id="about-content-1" class="max-w-3xl mx-auto text-center bg-white bg-opacity-50 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h2 class="text-4xl font-extrabold text-center mb-8" style="color: #4A90E2;">About Me</h2>
+                    <p class="text-lg mb-4" style="color: #333333;">
+                        I’m a passionate graphic designer and UI/UX enthusiast with practical experience from my studies. Throughout my time in school,
+                        I’ve learned the basics of design and how to create user-friendly experiences. I mix creativity with strategy to create designs
+                        that not only look great but also make a real impact.
+                    </p>
+                    <p class="text-lg" style="color: #333333;">
+                        From branding to digital illustrations and UI/UX design, I enjoy turning ideas into visuals that connect with people and leave a lasting impression.
+                    </p>
+                </div>
+    
+                <!-- Second About Me Content (Hidden initially) -->
+                <div id="about-content-2" class="max-w-3xl mx-auto text-center bg-white bg-opacity-70 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform hidden">
+                    <h2 class="text-4xl font-extrabold text-center mb-8" style="color: #4A90E2;">More About Me</h2>
+                    <p class="text-lg mb-4" style="color: #333333;">
+                        I love working on creative projects that challenge my design skills. With an eye for detail and a passion for problem-solving,
+                        I strive to make intuitive and aesthetically pleasing designs that not only meet the needs of users but also inspire them.
+                    </p>
+                    <p class="text-lg" style="color: #333333;">
+                        Whether designing for mobile, web, or print, I’m dedicated to creating seamless, engaging experiences that stand out in today’s competitive landscape.
+                    </p>
+                </div>
+    
+                <!-- Left and Right Slideshow Navigation -->
+                <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full">
+                    &#8592;
+                </button>
+                <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full">
+                    &#8594;
+                </button>
             </div>
         </div>
     </section>
-
+    
+    <script>
+        // JavaScript to handle slideshow navigation
+        let currentIndex = 0;
+        const slides = document.querySelectorAll("#about-content-1, #about-content-2");
+    
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+    
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("hidden", i !== currentIndex); // Toggle hidden class
+            });
+        }
+    
+        document.getElementById("prev").addEventListener("click", () => {
+            showSlide(currentIndex - 1);
+        });
+    
+        document.getElementById("next").addEventListener("click", () => {
+            showSlide(currentIndex + 1);
+        });
+    
+        // Initialize the first slide
+        showSlide(currentIndex);
+    </script>
+    
+    
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
@@ -126,19 +184,28 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
-            <p class="text-xl mb-8">Interested in creating something awesome? Drop me a message!</p>
-            <form class="max-w-lg mx-auto">
-                <input type="text" placeholder="Your Name" class="w-full mb-4 p-3 rounded text-gray-800" required>
-                <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 rounded text-gray-800" required>
-                <textarea placeholder="Your Message" class="w-full mb-4 p-3 rounded text-gray-800" rows="4" required></textarea>
-                <button type="submit" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">Send Message</button>
-            </form>
+  <!-- Contact Section -->
+<section id="contact" class="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+        <p class="text-xl mb-8">Feel free to reach out through any of the platforms below!</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/aenjiie.bnsto/" target="_blank" class="text-white text-3xl hover:text-gray-200 transition">
+                <!-- Instagram Logo -->
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/aenjie.2002" target="_blank" class="text-white text-3xl hover:text-gray-200 transition">
+                <!-- Facebook Logo -->
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="mailto:angelicabanastao@gmail.com" class="text-white text-3xl hover:text-gray-200 transition">
+                <!-- Gmail Logo -->
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
@@ -148,7 +215,7 @@
                 <a href="#" class="hover:text-blue-400 transition"><i data-lucide="instagram"></i></a>
                 <a href="#" class="hover:text-blue-400 transition"><i data-lucide="behance"></i></a>
             </div>
-            <p>&copy; 2024 Ma. Angelica V. . All Rights Reserved.</p>
+            <p>&copy; 2024 Ma. Angelica V. Banastao All Rights Reserved.</p>
         </div>
     </footer>
 
