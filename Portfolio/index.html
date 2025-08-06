@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional UI/UX Designer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Dark mode styles */
+    .dark {
+      color-scheme: dark;
+    }
+    .dark body {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #f3f4f6 !important;
+    }
+    .dark * {
+      color: #f3f4f6 !important;
+      border-color: #23272f !important;
+    }
+    .dark .bg-white,
+    .dark .bg-gray-50,
+    .dark .bg-gradient-to-br {
+      background-color: #181a20 !important;
+      color: #f3f4f6 !important;
+    }
+    .dark .text-gray-800,
+    .dark .text-gray-700,
+    .dark .text-gray-600,
+    .dark .text-gray-500,
+    .dark .text-gray-400 {
+      color: #f3f4f6 !important;
+    }
+    .dark p,
+    .dark .text-base,
+    .dark .text-lg,
+    .dark .text-sm,
+    .dark .font-medium,
+    .dark .font-semibold {
+      color: #e5e7eb !important;
+    }
+    .dark h1, .dark h2, .dark h3, .dark h4 {
+      color: #f3f4f6 !important;
+    }
+    .dark .btn-primary, .dark .btn-secondary {
+      color: #f3f4f6 !important;
+    }
+    .dark .project-tag, .dark .tool-name {
+      color: #f3f4f6 !important;
+    }
+    .dark .bg-white, .dark .bg-gray-50 {
+      background-color: #23272f !important;
+    }
+    .dark .rounded-2xl,
+    .dark .p-8,
+    .dark .max-w-2xl,
+    .dark .max-w-4xl {
+      background-color: #181a20 !important;
+      color: #f3f4f6 !important;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important;
+    }
+    .dark #experienceModal h2,
+    .dark #experienceModal h3,
+    .dark #experienceModal h4,
+    .dark #certificateModal h2,
+    .dark #certificateModal h3,
+    .dark #certificateModal h4 {
+      color: #f3f4f6 !important;
+    }
+    .dark #experienceModal p,
+    .dark #experienceModal li,
+    .dark #certificateModal p,
+    .dark #certificateModal li {
+      color: #bfc7d5 !important;
+    }
+    .dark #experienceModal .font-semibold,
+    .dark #certificateModal .font-semibold {
+      color: #f3f4f6 !important;
+    }
+    .dark #experienceModal button,
+    .dark #certificateModal button {
+      color: #f3f4f6 !important;
+      background-color: #23272f !important;
+      border-color: #23272f !important;
+    }
+    .dark #experienceModal a,
+    .dark #certificateModal a {
+      color: #60a5fa !important;
+      text-decoration: underline;
+    }
+    .dark #certificateModal [class*='bg-gradient-to-']:not(svg),
+    .dark #experienceModal [class*='bg-gradient-to-']:not(svg) {
+      background-color: #181a20 !important;
+      background-image: none !important;
+      color: #f3f4f6 !important;
+    }
+    .dark #certificateModal [class*='bg-gradient-to-']:not(svg) *,
+    .dark #experienceModal [class*='bg-gradient-to-']:not(svg) * {
+      color: #f3f4f6 !important;
+      fill: #f3f4f6 !important;
+    }
+    .dark #certificateModal,
+    .dark #experienceModal {
+      background: #101114 !important;
+    }
+    
+    .dark .nav-glass {
+      background: rgba(26, 26, 46, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .dark .bg-gradient-to-br.from-gray-50.via-blue-50.to-purple-50 {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    }
+    
+    .dark .bg-gradient-to-br.from-indigo-50.via-purple-50.to-pink-50 {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #581c87 100%);
+    }
+    
+    .dark .bg-gradient-to-br.from-gray-50.to-blue-50 {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
+    
+    .dark .bg-gradient-to-br.from-white.to-gray-50 {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    }
+    
+    .dark .bg-gradient-to-br.from-gray-50.to-blue-50 {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
+    
+    .dark .bg-gradient-to-br.from-indigo-600.via-purple-600.to-pink-600 {
+      background: linear-gradient(135deg, #3730a3 0%, #7c3aed 50%, #be185d 100%);
+    }
+    
+    .dark .bg-white {
+      background-color: #1f2937;
+    }
+    
+    .dark .bg-gray-50 {
+      background-color: #374151;
+    }
+    
+    .dark .text-gray-800 {
+      color: #f9fafb;
+    }
+    
+    .dark .text-gray-600 {
+      color: #d1d5db;
+    }
+    
+    .dark .text-gray-700 {
+      color: #e5e7eb;
+    }
+    
+    .dark .bg-gray-50 {
+      background-color: #374151;
+    }
+    
+    .dark .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dark .shadow-xl {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dark .shadow-2xl {
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Enhanced animations and effects */
+    .fade-in-up {
+      animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1.2) both;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .contact-icon {
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .contact-icon:hover {
+      animation: iconBounce 0.5s;
+      color: #7c3aed;
+      transform: scale(1.2) translateY(-4px);
+    }
+    @keyframes iconBounce {
+      0% { transform: scale(1) translateY(0); }
+      30% { transform: scale(1.2) translateY(-8px); }
+      60% { transform: scale(0.95) translateY(2px); }
+      100% { transform: scale(1.1) translateY(-4px); }
+    }
+    
+    .fade-in-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    
+    .fade-in-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    
+    .scale-in {
+      animation: scaleIn 0.6s ease-out forwards;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    
+    @keyframes fadeInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes fadeInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    /* Enhanced gradient backgrounds */
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .section-gradient {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .card-gradient {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    /* Enhanced skill cards */
+    .skill-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: translateY(0);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .skill-card:hover::before {
+      left: 100%;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    }
+    
+    /* Featured project cards */
+    .featured-project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .featured-project-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .project-screenshot {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-screenshot img {
+      transition: transform 0.4s ease;
+    }
+    
+    .featured-project-card:hover .project-screenshot img {
+      transform: scale(1.05);
+    }
+    
+    .project-content {
+      position: relative;
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .project-tag {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+    
+    .project-tag:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dark .featured-project-card {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .dark .featured-project-card:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Enhanced navigation */
+    .nav-glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Enhanced buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #667eea;
+      color: #667eea;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    }
+    
+    /* Enhanced profile image */
+    .profile-container {
+      position: relative;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
+    }
+    
+    .profile-container::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c, #667eea);
+      background-size: 400% 400%;
+      border-radius: 28px;
+      z-index: -1;
+      animation: gradientShift 4s ease-in-out infinite, pulse 2s ease-in-out infinite alternate;
+      filter: blur(2px);
+      border: 3px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .profile-container::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+      background-size: 300% 300%;
+      border-radius: 24px;
+      z-index: -1;
+      animation: gradientShift 3s ease-in-out infinite reverse, glow 3s ease-in-out infinite alternate;
+      opacity: 0.8;
+      border: 2px solid rgba(118, 75, 162, 0.4);
+    }
+    
+    /* Design Tools Orbit */
+    .design-tools-orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 420px;
+      height: 420px;
+      pointer-events: none;
+    }
+    
+         .tool-icon {
+       position: absolute;
+       width: 60px;
+       height: 60px;
+       animation: orbit 20s linear infinite, orbitCycle 6s ease-in-out infinite;
+       transition: all 0.3s ease;
+       filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.3));
+     }
+    
+         .tool-icon:hover {
+       transform: scale(1.4);
+       z-index: 10;
+       filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8));
+       animation-play-state: paused;
+     }
+     
+     .tool-icon:hover img {
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(102, 126, 234, 0.4);
+     }
+    
+         .tool-icon img {
+       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       filter: brightness(0.9) contrast(1.1);
+     }
+     
+     .tool-icon:hover img {
+       filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 10px rgba(102, 126, 234, 0.6));
+       transform: rotate(5deg) scale(1.1);
+     }
+    
+    .tool-icon:hover img {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Position each tool icon around the circle */
+    .tool-icon-figma {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-delay: 0s, 0s;
+    }
+    
+    .tool-icon-xd {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      animation-delay: -4s, 1s;
+    }
+    
+    .tool-icon-sketch {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-delay: -8s, 2s;
+    }
+    
+    .tool-icon-canva {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      animation-delay: -12s, 3s;
+    }
+    
+         .tool-icon-origami {
+       top: 25%;
+       right: 25%;
+       animation-delay: -16s, 4s;
+     }
+     
+     .tool-icon-wordpress {
+       top: 25%;
+       left: 25%;
+       animation-delay: -20s, 5s;
+     }
+    
+         @keyframes orbit {
+       0% {
+         transform: rotate(0deg) translateX(170px) rotate(0deg);
+       }
+       100% {
+         transform: rotate(360deg) translateX(170px) rotate(-360deg);
+       }
+     }
+     
+     /* Add floating animation for more dynamic movement */
+     .tool-icon {
+       animation: orbit 20s linear infinite, float 3s ease-in-out infinite;
+     }
+     
+     @keyframes float {
+       0%, 100% { transform: translateY(0px); }
+       50% { transform: translateY(-5px); }
+     }
+     
+     @keyframes iconGlow {
+       0%, 100% {
+         filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.3));
+       }
+       50% {
+         filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
+       }
+     }
+    
+    /* Responsive adjustments for mobile */
+    @media (max-width: 768px) {
+      .design-tools-orbit {
+        width: 320px;
+        height: 320px;
+      }
+      
+      .tool-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .tool-icon img {
+      width: 40px;
+      height: 40px;
+      }
+      
+      @keyframes orbit {
+        0% {
+          transform: rotate(0deg) translateX(125px) rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg) translateX(125px) rotate(-360deg);
+        }
+      }
+    }
+    
+    @keyframes gradientShift {
+      0% { 
+        background-position: 0% 50%;
+        transform: rotate(0deg) scale(1);
+      }
+      25% { 
+        background-position: 100% 50%;
+        transform: rotate(90deg) scale(1.05);
+      }
+      50% { 
+        background-position: 100% 100%;
+        transform: rotate(180deg) scale(1);
+      }
+      75% { 
+        background-position: 0% 100%;
+        transform: rotate(270deg) scale(1.05);
+      }
+      100% { 
+        background-position: 0% 50%;
+        transform: rotate(360deg) scale(1);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { 
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+      }
+      100% { 
+        transform: scale(1.02);
+        box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
+      }
+    }
+    
+    @keyframes glow {
+      0% { 
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 40px rgba(102, 126, 234, 0.3);
+        filter: brightness(1);
+      }
+      100% { 
+        box-shadow: 0 0 40px rgba(102, 126, 234, 0.9), 0 0 80px rgba(102, 126, 234, 0.5);
+        filter: brightness(1.3);
+      }
+    }
+    
+    /* Enhanced timeline */
+    .timeline-item {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover {
+      transform: translateX(10px);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 24px;
+      width: 2px;
+      height: calc(100% - 24px);
+      background: linear-gradient(180deg, #667eea, #764ba2);
+      opacity: 0.3;
+    }
+
+    /* Enhanced slider */
+    .slider-container {
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 2rem;
+      border-radius: 20px;
+    }
+    
+    .slider-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      will-change: transform;
+      padding: 1rem 0;
+    }
+    
+    .slider-slide {
+      flex: 0 0 30%;
+      min-width: 0;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .slider-slide:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Enhanced studio tools */
+    .studio-tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 32px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .studio-tool-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px;
+      position: relative;
+      transition: all 0.3s ease;
+      min-height: 120px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    
+    .studio-tool-card:hover {
+      border-color: #667eea;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    }
+    
+    .dark .studio-tool-card {
+      background: #1f2937;
+      border-color: #374151;
+    }
+    
+    .dark .studio-tool-card:hover {
+      border-color: #667eea;
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+    }
+    
+    .tool-name {
+      color: #374151;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 8px;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    
+    .dark .tool-name {
+      color: #e5e7eb;
+    }
+    
+    /* Enhanced testimonials */
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    /* Enhanced contact form */
+    .contact-form {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+    }
+    
+    .form-input {
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      background: white;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* Floating animation */
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    /* Enhanced title animations */
+    .title-highlight {
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+      background-size: 300% 300%;
+      animation: gradientShift 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.5)); }
+      to { filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8)); }
+    }
+    
+    .title-bounce {
+      animation: titleBounce 0.6s ease-out 0.3s both;
+    }
+    
+    @keyframes titleBounce {
+      0% { transform: translateY(-50px); opacity: 0; }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Particle background */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: particleFloat 20s infinite linear;
+    }
+    
+    @keyframes particleFloat {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+    }
+    
+    /* Responsive enhancements */
+    @media (max-width: 768px) {
+      .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .skill-card:hover {
+        transform: translateY(-5px) scale(1.01);
+      }
+      
+      .studio-tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .studio-tools-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    
+    /* Enhanced Design Slider */
+    .enhanced-slider-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    .enhanced-slider-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+      padding: 10px 0;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transform: translateZ(0); /* Force hardware acceleration */
+    }
+    
+    .enhanced-slider-card {
+      flex: 0 0 220px;
+      min-width: 0;
+      flex-shrink: 0;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      background: white;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      transform: translateZ(0); /* Force hardware acceleration */
+    }
+    
+    .enhanced-slider-card:hover {
+      transform: translateY(-6px) scale(1.08);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+    
+    .enhanced-slider-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      border-radius: 12px;
+    }
+    
+    .enhanced-slider-card:hover .enhanced-slider-img {
+      transform: scale(1.15);
+    }
+    
+    .enhanced-slider-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+      color: white;
+      padding: 12px;
+      transform: translateY(100%);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      backdrop-filter: blur(10px);
+    }
+    
+    .enhanced-slider-card:hover .enhanced-slider-overlay {
+      transform: translateY(0);
+    }
+    
+    .enhanced-slider-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+    
+    .enhanced-slider-desc {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      line-height: 1.2;
+    }
+    
+
+    
+    .dark .enhanced-slider-card {
+      background: #1f2937;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dark .enhanced-slider-card:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    
+
+    
+    /* Enhanced scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #5a6fd8, #6a5acd);
+    }
+
+    @keyframes orbitCycle {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      10% { opacity: 1; transform: scale(1.1); }
+      20% { opacity: 1; transform: scale(1.15); }
+      30% { opacity: 1; transform: scale(1.1); }
+      40% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0.2; transform: scale(0.8); }
+    }
+    .design-tools-orbit .tool-icon {
+      animation: orbit 20s linear infinite, orbitCycle 6s ease-in-out infinite;
+      /* Each icon will have a different delay for the cycle effect */
+    }
+    .design-tools-orbit .tool-icon-figma { animation-delay: 0s, 0s; }
+    .design-tools-orbit .tool-icon-xd { animation-delay: -4s, 1s; }
+    .design-tools-orbit .tool-icon-sketch { animation-delay: -8s, 2s; }
+    .design-tools-orbit .tool-icon-canva { animation-delay: -12s, 3s; }
+    .design-tools-orbit .tool-icon-origami { animation-delay: -16s, 4s; }
+    .design-tools-orbit .tool-icon-wordpress { animation-delay: -20s, 5s; }
+    /* Increase orbit radius to avoid face */
+    .design-tools-orbit {
+      width: 420px;
+      height: 420px;
+    }
+    @media (max-width: 768px) {
+      .design-tools-orbit { width: 320px; height: 320px; }
+    }
+
+    /* Fix light info boxes in dark mode for modals and cards */
+    .dark .bg-blue-50,
+    .dark .bg-green-50,
+    .dark .bg-purple-50,
+    .dark .bg-gradient-to-r,
+    .dark .bg-gradient-to-br {
+      background-color: #23293a !important;
+      color: #f3f4f6 !important;
+    }
+    .dark .bg-blue-50 *,
+    .dark .bg-green-50 *,
+    .dark .bg-purple-50 * {
+      color: #f3f4f6 !important;
+    }
+
+    .appweb-hover-anim {
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s;
+    }
+    .appweb-hover-anim:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 12px 32px rgba(99, 102, 241, 0.25), 0 2px 8px rgba(0,0,0,0.10);
+      z-index: 2;
+    }
+    .contact-info-grid {
+      animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1.2) both;
+    }
+    .contact-box {
+      cursor: pointer;
+      transform: translateY(20px) scale(0.98);
+      opacity: 0.95;
+    }
+    .contact-box:hover {
+      transform: scale(1.04) translateY(-6px) rotate(-1deg);
+      box-shadow: 0 12px 32px rgba(99, 102, 241, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+      opacity: 1;
+      z-index: 2;
+    }
+    .dark .contact-box, .dark .contact-box * {
+      color: #f3f4f6 !important;
+    }
+    .dark .contact-box a {
+      color: #a5b4fc !important;
+    }
+    .dark .contact-box {
+      background: linear-gradient(135deg, #23293a 0%, #232946 100%) !important;
+    }
+    /* Unique animation for My Design Work cards */
+    .design-work-anim {
+      opacity: 0;
+      transform: translateY(30px) scale(0.96);
+      animation: designWorkFadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1.2) forwards;
+    }
+    @keyframes designWorkFadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .design-work-anim:hover {
+      transform: scale(1.07) translateY(-4px) !important;
+      box-shadow: 0 12px 32px rgba(99, 102, 241, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+  <!-- Navigation -->
+  <nav class="fixed w-full nav-glass z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Ma. Angelica</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Home</a>
+          <a href="#studio" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Pixelforms</a>
+          <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Projects</a>
+          <a href="#services" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Services</a>
+          <a href="#certifications" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Certifications</a>
+          <a href="#contact-info" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium dark:text-gray-300 dark:hover:text-indigo-400">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg dark:hover:bg-gray-700 transition-all duration-300">
+            <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-400 text-lg"></i>
+          </button>
+        </div>
+        <div class="md:hidden flex items-center space-x-4">
+          <!-- Theme Toggle for Mobile -->
+          <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300">
+            <i id="theme-icon-mobile" class="fas fa-moon text-gray-700 dark:text-yellow-400 text-lg"></i>
+          </button>
+          <button id="menu-btn" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg pb-4 px-4 border-t border-gray-200 dark:border-gray-700">
+      <a href="#home" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Home</a>
+      <a href="#studio" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Pixelforms</a>
+      <a href="#projects" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Projects</a>
+      <a href="#services" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Services</a>
+      <a href="#certifications" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Certifications</a>
+      <a href="#contact-info" class="block py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 font-medium">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <!-- Particle background -->
+    <div class="particles">
+      <div class="particle" style="left: 10%; animation-delay: 0s; animation-duration: 15s;"></div>
+      <div class="particle" style="left: 20%; animation-delay: 2s; animation-duration: 18s;"></div>
+      <div class="particle" style="left: 30%; animation-delay: 4s; animation-duration: 12s;"></div>
+      <div class="particle" style="left: 40%; animation-delay: 6s; animation-duration: 20s;"></div>
+      <div class="particle" style="left: 50%; animation-delay: 8s; animation-duration: 16s;"></div>
+      <div class="particle" style="left: 60%; animation-delay: 10s; animation-duration: 14s;"></div>
+      <div class="particle" style="left: 70%; animation-delay: 12s; animation-duration: 17s;"></div>
+      <div class="particle" style="left: 80%; animation-delay: 14s; animation-duration: 19s;"></div>
+      <div class="particle" style="left: 90%; animation-delay: 16s; animation-duration: 13s;"></div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row items-center">
+      <!-- IMAGE FIRST for left side -->
+      <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 flex justify-center">
+        <div class="profile-container fade-in-left">
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+            <img src="src/me.png" alt="Ma. Angelica profile photo" class="w-[24rem] h-[30rem] object-contain rounded-2xl float" />
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="text-lg font-semibold mb-1">UI/UX Designer</p>
+              <p class="text-sm opacity-90">Product Thinker & Creative Problem Solver</p>
+            </div>
+          </div>
+          
+                     <!-- Design Tool Icons -->
+           <div class="design-tools-orbit">
+             <!-- Figma Icon -->
+             <div class="tool-icon tool-icon-figma">
+               <img src="src/figma.png" alt="Figma" class="w-12 h-12 object-contain">
+             </div>
+             
+             <!-- Adobe XD Icon -->
+             <div class="tool-icon tool-icon-xd">
+               <img src="src/XD.png" alt="Adobe XD" class="w-12 h-12 object-contain">
+             </div>
+             
+             <!-- Sketch Icon -->
+             <div class="tool-icon tool-icon-sketch">
+               <img src="src/sketchbook.png" alt="Sketch" class="w-12 h-12 object-contain">
+             </div>
+             
+             <!-- Canva Icon -->
+             <div class="tool-icon tool-icon-canva">
+               <img src="src/canva.png" alt="Canva" class="w-12 h-12 object-contain">
+             </div>
+             
+             <!-- Origami Icon -->
+             <div class="tool-icon tool-icon-origami">
+               <img src="src/origami.png" alt="Origami" class="w-12 h-12 object-contain">
+             </div>
+             
+             <!-- WordPress Icon -->
+             <div class="tool-icon tool-icon-wordpress">
+               <img src="src/wordpress.png" alt="WordPress" class="w-12 h-12 object-contain">
+             </div>
+           </div>
+        </div>
+      </div>
+      <!-- TEXT SECOND for right side -->
+      <div class="md:w-1/2 fade-in-right">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4 leading-tight">
+          Hi, I'm <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Ma. Angelica</span>
+        </h1>
+        <div class="mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            UI/UX Designer
+          </h2>
+        </div>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed fade-in-up" style="animation-delay: 0.5s;">I design clear, practical interfaces that make digital products easier to use. My focus is on solving real problems through smart layout, strong visuals, and user-first thinking. Every detail has a purpose.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+          <a href="#projects" class="btn-primary text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg">View My Work</a>
+          <a href="#contact" class="btn-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Tools Section -->
+  <section id="studio" class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Pixelforms</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">My design toolkit includes professional tools to create stunning digital experiences that captivate and convert</p>
+      </div>
+      
+      <div class="studio-tools-grid" id="tools">
+        <div class="studio-tool-card">
+          <img src="src/XD.png" alt="Adobe XD" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">Adobe XD</div>
+        </div>
+        <div class="studio-tool-card">
+          <img src="src/figma.png" alt="Figma" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">Figma</div>
+        </div>
+        <div class="studio-tool-card">
+          <img src="src/wordpress.png" alt="WordPress" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">WordPress</div>
+        </div>
+        <div class="studio-tool-card">
+          <img src="src/origami.png" alt="Origami" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">Origami</div>
+        </div>
+        <div class="studio-tool-card">
+          <img src="src/sketchbook.png" alt="Sketchbook" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">Sketchbook</div>
+        </div>
+        <div class="studio-tool-card">
+          <img src="src/canva.png" alt="Canva" class="w-12 h-12 object-contain mb-3" />
+          <div class="tool-name">Canva</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Showcase Continuous Minimal Slider -->
+  <section class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 scale-in">
+        <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">My Design Work</h2>
+        <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed" style="background:none !important; box-shadow:none !important;">A showcase of my UI/UX design projects and creative process that transforms ideas into beautiful digital experiences</p>
+      </div>
+      <div class="relative bg-white rounded-2xl shadow-xl p-6">
+        <div id="myDesignSliderTrack" class="flex gap-4 overflow-x-hidden whitespace-nowrap py-2"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+  // Replace designWorks array with new images and titles
+  const designWorks = [
+    { src: 'src/design.png', title: 'Asenso App', desc: '' },
+    { src: 'src/design1.png', title: 'Syntax Cafe Customize Mug', desc: '' },
+    { src: 'src/design2.png', title: 'Digital Poster Making Competition Top 2', desc: '' },
+    { src: 'src/design3.png', title: 'T-shirt Design Competition', desc: '' },
+    { src: 'src/design4.png', title: 'Lanyard Competition', desc: '' },
+    { src: 'src/design5.png', title: "Aenjie's Footwear Haven", desc: '' },
+    { src: 'src/design6.png', title: 'Cosmetics Business', desc: '' },
+  ];
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  shuffleArray(designWorks);
+  // Duplicate the array for seamless looping
+  const sliderItems = [...designWorks, ...designWorks];
+  const track = document.getElementById('myDesignSliderTrack');
+  track.innerHTML = '';
+  sliderItems.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.className = 'inline-block bg-white rounded-xl shadow flex flex-col items-center min-w-[140px] max-w-[140px] w-[140px] mx-1 design-work-anim relative overflow-hidden';
+    card.style.animationDelay = (idx * 0.12) + 's';
+    card.innerHTML = `
+      <div class="relative w-full h-[100px] overflow-hidden">
+        <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-110" />
+        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+          <h3 class="text-white text-xs font-semibold text-center px-2 opacity-0 hover:opacity-100 transition-opacity duration-300">${item.title}</h3>
+        </div>
+      </div>
+    `;
+    track.appendChild(card);
+  });
+  // Auto-scroll logic
+  let scrollAmount = 0;
+  function autoScroll() {
+    scrollAmount += 1;
+    if (scrollAmount >= track.scrollWidth / 2) {
+      scrollAmount = 0;
+    }
+    track.scrollLeft = scrollAmount;
+    requestAnimationFrame(autoScroll);
+  }
+  autoScroll();
+  </script>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gradient-to-br from-white to-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">My Skills & Expertise</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">I combine design thinking with technical knowledge to create solutions that are both beautiful and functional.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Skill Card 1 -->
+        <div class="skill-card p-8 rounded-2xl transition duration-300 fade-in-up" style="animation-delay: 0.1s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-paint-brush text-indigo-600 dark:text-indigo-300 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">UI Design</h3>
+          <p class="text-white/90 leading-relaxed">Creating visually stunning interfaces with pixel-perfect precision that align with brand identity and user needs.</p>
+        </div>
+        
+        <!-- Skill Card 2 -->
+        <div class="skill-card p-8 rounded-2xl transition duration-300 fade-in-up" style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-user-friends text-white text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">UX Research</h3>
+          <p class="text-white/90 leading-relaxed">Conducting user interviews, surveys, and testing to inform design decisions and validate product directions.</p>
+        </div>
+        
+        <!-- Skill Card 3 -->
+        <div class="skill-card p-8 rounded-2xl transition duration-300 fade-in-up" style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-mobile-alt text-white text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Prototyping</h3>
+          <p class="text-white/90 leading-relaxed">Building interactive prototypes to test flows and gather feedback before development begins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Featured Projects</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Here are some of my recent projects that showcase my skills and experience.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- App/Web Vetcare Clinic project -->
+        <div class="featured-project-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl fade-in-up" style="animation-delay: 0.1s;">
+          <div class="project-screenshot">
+            <img src="src/appweb.png" alt="App/Web Vetcare Clinic interface" class="w-full h-48 object-cover cursor-pointer" id="appweb-project-img">
+          </div>
+          <div class="project-content p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">App/Web Vetcare Clinic</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">A web application platform for veterinary clinic management with modern UI/UX and robust features.</p>
+            <div class="project-tags flex flex-wrap gap-2">
+              <span class="project-tag bg-gray-800 text-white">Web</span>
+              <span class="project-tag bg-green-500 text-white">App</span>
+              <span class="project-tag bg-blue-500 text-white">UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <!-- ATW Syntax project -->
+        <div class="featured-project-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl fade-in-up" style="animation-delay: 0.2s;">
+          <div class="project-screenshot">
+            <img src="src/atwsyntax.png" alt="ATW Syntax interface" class="w-full h-48 object-cover cursor-pointer">
+          </div>
+          <div class="project-content p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">ATW Syntax</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">A modern code syntax highlighter and editor for developers and designers.</p>
+            <div class="project-tags flex flex-wrap gap-2">
+              <span class="project-tag bg-gray-800 text-white">Web</span>
+              <span class="project-tag bg-purple-500 text-white">Syntax</span>
+              <span class="project-tag bg-blue-500 text-white">Editor</span>
+            </div>
+          </div>
+        </div>
+        <!-- CraftKnots project -->
+        <div class="featured-project-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl fade-in-up" style="animation-delay: 0.3s;">
+          <div class="project-screenshot">
+            <img src="src/craftknots.png" alt="CraftKnots interface" class="w-full h-48 object-cover cursor-pointer">
+          </div>
+          <div class="project-content p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">CraftKnots</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">A platform for handmade crafts, showcasing unique knotting techniques and artisan products.</p>
+            <div class="project-tags flex flex-wrap gap-2">
+              <span class="project-tag bg-gray-800 text-white">Web</span>
+              <span class="project-tag bg-pink-500 text-white">Crafts</span>
+              <span class="project-tag bg-yellow-500 text-white">Marketplace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-gradient-to-br from-white to-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Internship Experience</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">My professional journey designing digital products for companies of all sizes.</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Experience 1 - OJT 2 -->
+        <div class="timeline-item relative pl-10 pb-8">
+          <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-600 border-4 border-indigo-100"></div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-3">
+              <img src="src/jmh.jpg" alt="JMH IT - Asenso Solutions Inc. logo" class="w-10 h-10 rounded-full mr-3" />
+              <h3 class="text-xl font-semibold text-gray-800">Mobile UI/UX Designer & Web QA Automation Tester</h3>
+            </div>
+            <p class="text-indigo-600 font-medium mb-2">📍 Salugan, Camalig, Albay | 300 Hours</p>
+            <p class="text-indigo-600 font-medium mb-2">📅 October 7, 2024 – December 6, 2024</p>
+            <p class="text-indigo-600 font-medium mb-2">🏢 JMH IT - Asenso Solutions Inc.</p>
+            <p class="text-gray-600 mb-4">Designed and improved UI/UX for mobile applications while conducting QA automation testing for websites.</p>
+            <button onclick="showExperienceDetails('ojt2')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-medium">Experience Overview</button>
+          </div>
+        </div>
+        
+        <!-- Experience 2 - OJT 1 -->
+        <div class="timeline-item relative pl-10">
+          <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-600 border-4 border-indigo-100"></div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-3">
+              <img src="src/upward.jpg" alt="Upward Solutions logo" class="w-10 h-10 rounded-full mr-3" />
+              <h3 class="text-xl font-semibold text-gray-800">QA Manual Tester</h3>
+            </div>
+            <p class="text-indigo-600 font-medium mb-2">📍 Legazpi City | 320 Hours</p>
+            <p class="text-indigo-600 font-medium mb-2">📅 February 17, 2023 – May 27, 2023</p>
+            <p class="text-indigo-600 font-medium mb-2">🏢 Upward Solutions</p>
+            <p class="text-gray-600 mb-4">Conducted manual testing on mobile apps and websites to ensure functionality and user experience quality.</p>
+            <button onclick="showExperienceDetails('ojt1')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-medium">Experience Overview</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">My Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          I blend thoughtful design and functionality to create digital experiences that are intuitive, engaging, and aligned with your goals. Here's how I can contribute to your project:
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- User Interface Design -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl fade-in-up" style="animation-delay: 0.1s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-paint-brush text-indigo-600 dark:text-indigo-300 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">User Interface Design</h3>
+          <p class="text-gray-600 mb-4">I design visually polished and accessible interfaces that support user needs while staying true to your brand.</p>
+        </div>
+        <!-- UX Flow Planning -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl fade-in-up" style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-route text-blue-600 dark:text-blue-300 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">UX Flow Planning</h3>
+          <p class="text-gray-600 mb-4">I structure user journeys to ensure smooth navigation and logical interaction from start to finish.</p>
+        </div>
+        <!-- Design Audits -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl fade-in-up" style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-search text-yellow-600 dark:text-yellow-300 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Design Audits</h3>
+          <p class="text-gray-600 mb-4">I evaluate existing designs to identify usability issues and provide clear, actionable improvements.</p>
+        </div>
+        <!-- Prototype and Interaction Design -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl fade-in-up" style="animation-delay: 0.4s;">
+          <div class="w-16 h-16 flex items-center justify-center mb-6">
+            <i class="fas fa-object-group text-pink-600 dark:text-pink-300 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Prototype and Interaction Design</h3>
+          <p class="text-gray-600 mb-4">I develop interactive prototypes to simulate the user experience and validate ideas before development begins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">My Certifications</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Professional certifications that validate my expertise in UI/UX design.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Certification 1 - Web 2023 -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <img src="src/web2023.jpg" alt="Certificate of Proficiency in Web Development" class="w-full h-48 object-contain mb-6 p-4 bg-gray-50 rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showCertificateImage('src/web2023.jpg', 'Certificate of Proficiency in Web Development')">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Proficiency in Web Development 2023</h3>
+          <p class="text-indigo-600 font-medium mb-4">Issued: June 9, 2023</p>
+          <p class="text-gray-600 mb-4">Awarded during the Commencement Exercises. Recognized for demonstrating a strong foundation in both front-end and back-end web development.</p>
+          <button onclick="showCertificate('web2023')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-medium">View Details</button>
+        </div>
+        
+        <!-- Certification 2 - UI/UX -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <img src="src/uiux.jpg" alt="Certificate of Proficiency in UI/UX Design" class="w-full h-48 object-contain mb-6 p-4 bg-gray-50 rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showCertificateImage('src/uiux.jpg', 'Certificate of Proficiency in UI/UX Design')">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Proficiency in UI/UX Design 2025</h3>
+          <p class="text-indigo-600 font-medium mb-4">Issued: June 9, 2025</p>
+          <p class="text-gray-600 mb-4">Awarded during the Commencement Exercises. Earned for excellence in designing user-centered interfaces and experiences.</p>
+          <button onclick="showCertificate('uiux')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-medium">View Details</button>
+        </div>
+        
+        <!-- Certification 3 - Web 2025 -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <img src="src/web2025.jpg" alt="Certificate of Proficiency in Web Development (Second Award)" class="w-full h-48 object-contain mb-6 p-4 bg-gray-50 rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showCertificateImage('src/web2025.jpg', 'Certificate of Proficiency in Web Development (Second Award)')">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Proficiency in Web Development 2025</h3>
+          <p class="text-indigo-600 font-medium mb-4">Issued: June 9, 2025</p>
+          <p class="text-gray-600 mb-4">Awarded during the Commencement Exercises. A reaffirmation of expertise in web development with advanced understanding.</p>
+          <button onclick="showCertificate('web2025')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-medium">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 scale-in">
+        <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">Trusted by Those We Serve.</h2>
+        <p class="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">What people I've worked with say about my work and the impact it has made.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial: Erica -->
+        <div class="testimonial-card p-8 rounded-2xl shadow-xl fade-in-up" style="animation-delay: 0.1s;">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-full overflow-hidden mr-4 ring-4 ring-white/20">
+              <img src="src/erica.jpg" alt="Erica testimonial photo" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 text-base">Erica L. Poche</h4>
+              <p class="text-gray-600 text-xs">Team Member</p>
+            </div>
+          </div>
+          <p class="text-gray-800 leading-relaxed text-sm">Working with her as part of our team, I must say that her designs are creative, show great attention to detail, and reflect a unique sense of style. She is always open to feedback, which makes collaboration smooth and productive. She communicates well and consistently meets deadlines. Whenever I need help editing a project, she is always there to assist and even teaches me some techniques for things I find difficult. Her positive attitude makes tasks feel easier, and I'm truly grateful to work with her—not only because the results are successful, but also because the experience is enjoyable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Details Modal -->
+  <div id="experienceModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="modalTitle" class="text-3xl font-bold text-gray-800"></h2>
+          <button onclick="closeExperienceModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="modalContent" class="space-y-6">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="certModalTitle" class="text-3xl font-bold text-gray-800"></h2>
+          <button onclick="closeCertificateModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="certModalContent" class="space-y-6">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="galleryLightbox" class="gallery-lightbox" style="display:none;">
+    <span class="gallery-lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="gallery-lightbox-img" id="lightboxImg" src="" alt="Design Work" />
+  </div>
+
+  <!-- Place this script at the end of the body -->
+  <script>
+    // --- My Design Work Carousel ---
+    const designWorksGallery = [
+      // { src: "src/YourImage1.jpeg", alt: "Your Work 1", label: "Label" },
+      // Add your images here
+    ];
+    const carousel = document.getElementById('designCarousel');
+    carousel.innerHTML = '';
+    designWorksGallery.forEach(work => {
+      const card = document.createElement('div');
+      card.className = 'design-card';
+      card.innerHTML = `
+        <img src="${work.src}" alt="${work.alt}" class="design-card-img" />
+        ${work.label ? `<div class="design-card-label">${work.label}</div>` : ''}
+      `;
+      const label = card.querySelector('.design-card-label');
+      card.onmouseenter = card.onclick = () => { if(label) label.style.opacity = 1; };
+      card.onmouseleave = () => { if(label) label.style.opacity = 0; };
+      carousel.appendChild(card);
+    });
+
+    // Slideshow logic for My Design Work
+    let designSlideIndex = 0;
+    const totalDesignSlides = designWorksGallery.length;
+    function updateDesignCarousel() {
+      const cardWidth = carousel.querySelector('.design-card')?.offsetWidth || 340;
+      carousel.style.transform = `translateX(-${designSlideIndex * (cardWidth + 32)}px)`;
+    }
+    let designSlideInterval = null;
+    if (totalDesignSlides > 1) {
+      designSlideInterval = setInterval(() => {
+        designSlideIndex = (designSlideIndex + 1) % totalDesignSlides;
+        updateDesignCarousel();
+      }, 2000);
+      // Pause on hover
+      carousel.addEventListener('mouseenter', () => clearInterval(designSlideInterval));
+      carousel.addEventListener('mouseleave', () => {
+        designSlideInterval = setInterval(() => {
+          designSlideIndex = (designSlideIndex + 1) % totalDesignSlides;
+          updateDesignCarousel();
+        }, 2000);
+      });
+    }
+
+    function openLightbox(src, alt) {
+      document.getElementById('galleryLightbox').style.display = 'flex';
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxImg').alt = alt;
+    }
+    function closeLightbox() {
+      document.getElementById('galleryLightbox').style.display = 'none';
+      document.getElementById('lightboxImg').src = '';
+    }
+  </script>
+
+  <!-- Custom Modal for AppWeb Project -->
+  <div id="appwebModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+      <button onclick="closeAppwebModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"><i class="fas fa-times"></i></button>
+      <div class="p-8 flex flex-col items-center">
+        <div class="flex flex-col md:flex-row gap-4 w-full max-w-lg justify-center items-center">
+          <img src="src/app.png" alt="App Sample Screenshot" class="w-full md:w-1/2 h-auto object-contain rounded-lg shadow-lg appweb-hover-anim">
+          <img src="src/web.png" alt="Web Sample Screenshot" class="w-full md:w-1/2 h-auto object-contain rounded-lg shadow-lg appweb-hover-anim">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ... existing code ...
+    // AppWeb Project Modal Logic
+    const appwebImg = document.getElementById('appweb-project-img');
+    const appwebModal = document.getElementById('appwebModal');
+    function closeAppwebModal() {
+      appwebModal.classList.add('hidden');
+      appwebModal.classList.remove('flex');
+    }
+    if (appwebImg && appwebModal) {
+      appwebImg.addEventListener('click', function() {
+        appwebSlideIndex = 0;
+        showAppwebSlide(appwebSlideIndex);
+        appwebModal.classList.remove('hidden');
+        appwebModal.classList.add('flex');
+        startAppwebSlider();
+      });
+      appwebModal.addEventListener('click', function(e) {
+        if (e.target === appwebModal) closeAppwebModal();
+      });
+    }
+    // Automatic slider for AppWeb modal
+    const appwebSlides = document.querySelectorAll('#appweb-slider .appweb-slide-img');
+    let appwebSlideIndex = 0;
+    let appwebSlideInterval = null;
+    function showAppwebSlide(idx) {
+      appwebSlides.forEach((img, i) => {
+        img.style.opacity = (i === idx) ? '1' : '0';
+      });
+    }
+    function startAppwebSlider() {
+      if (appwebSlideInterval) clearInterval(appwebSlideInterval);
+      appwebSlideInterval = setInterval(() => {
+        appwebSlideIndex = (appwebSlideIndex + 1) % appwebSlides.length;
+        showAppwebSlide(appwebSlideIndex);
+      }, 2500);
+    }
+    function stopAppwebSlider() {
+      if (appwebSlideInterval) clearInterval(appwebSlideInterval);
+    }
+    if (appwebModal) {
+      appwebModal.addEventListener('transitionend', function() {
+        if (!appwebModal.classList.contains('hidden')) {
+          showAppwebSlide(appwebSlideIndex);
+          startAppwebSlider();
+        }
+      });
+      appwebModal.addEventListener('mouseenter', stopAppwebSlider);
+      appwebModal.addEventListener('mouseleave', startAppwebSlider);
+    }
+    // Also start slider when modal is opened
+    if (appwebImg) {
+      appwebImg.addEventListener('click', function() {
+        appwebSlideIndex = 0;
+        showAppwebSlide(appwebSlideIndex);
+        startAppwebSlider();
+      });
+    }
+    // Stop slider when modal is closed
+    function closeAppwebModal() {
+      appwebModal.classList.add('hidden');
+      appwebModal.classList.remove('flex');
+      stopAppwebSlider();
+    }
+    window.closeAppwebModal = closeAppwebModal;
+    // Add manual controls for App and Web buttons
+    const showAppBtn = document.getElementById('showAppBtn');
+    const showWebBtn = document.getElementById('showWebBtn');
+    if (showAppBtn && showWebBtn) {
+      showAppBtn.addEventListener('click', function() {
+        appwebSlideIndex = 0;
+        showAppwebSlide(appwebSlideIndex);
+        stopAppwebSlider();
+      });
+      showWebBtn.addEventListener('click', function() {
+        appwebSlideIndex = 1;
+        showAppwebSlide(appwebSlideIndex);
+        stopAppwebSlider();
+      });
+    }
+    // ... existing code ...
+  </script>
+
+  <!-- Contact Info Section -->
+  <section id="contact-info" class="py-16 bg-gradient-to-br from-gray-50 to-blue-50 px-4 sm:px-6 lg:px-8 fade-in-up">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Information</h2>
+        <p class="text-lg text-gray-600">Feel free to reach out through any of the channels below!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg contact-info-grid fade-in-up">
+        <div class="contact-box bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900 dark:to-blue-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fas fa-map-marker-alt text-indigo-600 text-2xl contact-icon"></i>
+          <div><span class="font-semibold">Location:</span> Albay, Philippines</div>
+        </div>
+        <div class="contact-box bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900 dark:to-purple-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fas fa-envelope text-pink-600 text-2xl contact-icon"></i>
+          <div><span class="font-semibold">Email:</span> <a href="mailto:angelicabanastao@gmail.com" class="text-pink-700 hover:underline">angelicabanastao@gmail.com</a></div>
+        </div>
+        <div class="contact-box bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900 dark:to-teal-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fas fa-phone-alt text-green-600 text-2xl contact-icon"></i>
+          <div><span class="font-semibold">Phone:</span> <a href="tel:09515283957" class="text-green-700 hover:underline">09515283957</a></div>
+        </div>
+        <div class="contact-box bg-gradient-to-br from-yellow-100 to-pink-100 dark:from-yellow-900 dark:to-pink-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fab fa-instagram text-pink-500 text-2xl contact-icon"></i>
+          <div><span class="font-semibold">Instagram:</span> <a href="https://www.instagram.com/accounts/login/?next=%2Faenjiie.bnsto%2F&source=omni_redirect" target="_blank" class="text-pink-700 hover:underline">@aenjiie.bnsto</a></div>
+        </div>
+        <div class="contact-box bg-gradient-to-br from-gray-100 to-blue-200 dark:from-gray-800 dark:to-blue-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fab fa-github text-gray-800 dark:text-white text-2xl contact-icon"></i>
+          <div><span class="font-semibold">GitHub:</span> <a href="https://github.com/Aenjieee" target="_blank" class="text-gray-800 dark:text-white hover:underline">@Aenjieee</a></div>
+        </div>
+        <div class="contact-box bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900 dark:to-green-900 rounded-2xl shadow-xl flex items-center gap-4 p-6 transition-transform duration-300">
+          <i class="fab fa-linkedin text-blue-600 text-2xl contact-icon"></i>
+          <div><span class="font-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/ma-angelica-v-banastao-615367373" target="_blank" class="text-blue-700 hover:underline">ma-angelica-v-banastao-615367373</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+    const html = document.documentElement;
+
+    // Load theme from localStorage or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.classList.toggle('dark', currentTheme === 'dark');
+    updateThemeIcons();
+
+    function toggleTheme() {
+      html.classList.toggle('dark');
+      const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcons();
+    }
+
+    function updateThemeIcons() {
+      const isDark = html.classList.contains('dark');
+      // Use a more visible icon color for dark mode
+      const sunIcon = 'fas fa-sun text-yellow-300 drop-shadow-lg text-lg';
+      const moonIcon = 'fas fa-moon text-indigo-600 drop-shadow-lg text-lg';
+      if (themeIcon) themeIcon.className = isDark ? sunIcon : moonIcon;
+      if (themeIconMobile) themeIconMobile.className = isDark ? sunIcon : moonIcon;
+    }
+
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+  </script>
+
+  <script>
+    // Experience Details Modal Functions
+    function showExperienceDetails(experienceType) {
+      const modal = document.getElementById('experienceModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      let title, content;
+      switch(experienceType) {
+        case 'ojt1':
+          title = 'Upward Solutions';
+          content = `
+            <div class="space-y-6">
+              <div class="text-center mb-6">
+                <img src="src/OJT1.png" alt="OJT 1 Certificate" class="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg">
+              </div>
+              <div class="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">OJT Overview</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-4">
+                  <div><p class="font-semibold text-gray-700">📍 Location:</p><p class="text-gray-600">Legazpi City</p></div>
+                  <div><p class="font-semibold text-gray-700">⏱️ Duration:</p><p class="text-gray-600">320 Hours</p></div>
+                  <div><p class="font-semibold text-gray-700">📅 Period:</p><p class="text-gray-600">February 17, 2023 – May 27, 2023</p></div>
+                  <div><p class="font-semibold text-gray-700">🏢 Company:</p><p class="text-gray-600">Upward Solutions</p></div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">Conducted manual testing on mobile apps and websites to ensure functionality and user experience quality.</p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-4 rounded-lg border border-gray-200">
+                  <h4 class="font-semibold text-gray-800 mb-2">Key Responsibilities</h4>
+                  <ul class="text-gray-600 space-y-2 text-sm">
+                    <li>• Created detailed test cases based on app/web features and user stories</li>
+                    <li>• Reported bugs and inconsistencies using Jira Software</li>
+                    <li>• Provided clear documentation for the development team</li>
+                    <li>• Focused on improving user experience</li>
+                  </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200">
+                  <h4 class="font-semibold text-gray-800 mb-2">Skills Developed</h4>
+                  <ul class="text-gray-600 space-y-2 text-sm">
+                    <li>• Manual testing methodologies</li>
+                    <li>• Bug reporting and documentation</li>
+                    <li>• Jira Software proficiency</li>
+                    <li>• User experience validation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-800 mb-2">Achievements</h4>
+                <p class="text-blue-700 text-sm">Successfully identified and verified issues before release, contributing to improved product quality and user satisfaction.</p>
+              </div>
+            </div>
+          `;
+          break;
+        case 'ojt2':
+          title = 'JMH IT - Asenso Solutions Inc.';
+          content = `
+            <div class="space-y-6">
+              <div class="text-center mb-6">
+                <img src="src/OJT2.jpg" alt="OJT 2 Certificate" class="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg">
+              </div>
+              <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">OJT Overview</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-4">
+                  <div><p class="font-semibold text-gray-700">📍 Location:</p><p class="text-gray-600">Salugan, Camalig, Albay</p></div>
+                  <div><p class="font-semibold text-gray-700">⏱️ Duration:</p><p class="text-gray-600">300 Hours</p></div>
+                  <div><p class="font-semibold text-gray-700">📅 Period:</p><p class="text-gray-600">October 7, 2024 – December 6, 2024</p></div>
+                  <div><p class="font-semibold text-gray-700">🏢 Company:</p><p class="text-gray-600">JMH IT - Asenso Solutions Inc.</p></div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">Designed and improved UI/UX for mobile applications while conducting QA automation testing for websites.</p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-4 rounded-lg border border-gray-200">
+                  <h4 class="font-semibold text-gray-800 mb-2">UI/UX Design Responsibilities</h4>
+                  <ul class="text-gray-600 space-y-2 text-sm">
+                    <li>• Designed and improved UI/UX for mobile applications</li>
+                    <li>• Focused on user-friendly layouts and consistent design patterns</li>
+                    <li>• Enhanced mobile usability and visual hierarchy</li>
+                    <li>• Improved interactions and overall accessibility</li>
+                  </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200">
+                  <h4 class="font-semibold text-gray-800 mb-2">QA Automation Responsibilities</h4>
+                  <ul class="text-gray-600 space-y-2 text-sm">
+                    <li>• Conducted QA automation testing using Cypress</li>
+                    <li>• Wrote test scripts to validate forms, buttons, and links</li>
+                    <li>• Used GitHub for version control and collaboration</li>
+                    <li>• Reviewed test results and reported bugs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-purple-800 mb-2">Collaboration & Growth</h4>
+                <p class="text-purple-700 text-sm">Worked closely with developers in a cross-functional environment to align design, development, and testing processes, ensuring stable and user-ready releases.</p>
+              </div>
+            </div>
+          `;
+          break;
+      }
+      modalTitle.textContent = title;
+      modalContent.innerHTML = content;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeExperienceModal() {
+      const modal = document.getElementById('experienceModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+    document.getElementById('experienceModal').addEventListener('click', function(e) {
+      if (e.target === this) closeExperienceModal();
+    });
+    // Certification Modal Functions
+    function showCertificate(certType) {
+      const modal = document.getElementById('certificateModal');
+      const modalTitle = document.getElementById('certModalTitle');
+      const modalContent = document.getElementById('certModalContent');
+      let title, content;
+      switch(certType) {
+        case 'web2023':
+          title = 'Proficiency in Web Development';
+          content = `
+            <div class="space-y-6">
+              <div class="text-center">
+                <img src="src/web2023.jpg" alt="Proficiency in Web Development" class="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg">
+              </div>
+              <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Certification Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div><p class="font-semibold text-gray-700">Certificate Type:</p><p class="text-gray-600">Certificate of Proficiency</p></div>
+                  <div><p class="font-semibold text-gray-700">Issue Date:</p><p class="text-gray-600">June 9, 2023</p></div>
+                  <div><p class="font-semibold text-gray-700">Awarded During:</p><p class="text-gray-600">28th Commencement Exercises</p></div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-800 mb-2">Recognition</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Recognized for demonstrating a strong foundation in both front-end and back-end web development. This certification reflects my ability to build responsive, functional websites using modern technologies and best practices.</p>
+              </div>
+            </div>
+          `;
+          break;
+        case 'uiux':
+          title = 'Proficiency in UI/UX Design';
+          content = `
+            <div class="space-y-6">
+              <div class="text-center">
+                <img src="src/uiux.jpg" alt="Proficiency in UI/UX Design 2025" class="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg">
+              </div>
+              <div class="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Certification Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div><p class="font-semibold text-gray-700">Certificate Type:</p><p class="text-gray-600">Certificate of Proficiency</p></div>
+                  <div><p class="font-semibold text-gray-700">Issue Date:</p><p class="text-gray-600">June 9, 2025</p></div>
+                  <div><p class="font-semibold text-gray-700">Awarded During:</p><p class="text-gray-600">30th Commencement Exercises</p></div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-800 mb-2">Recognition</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Earned for excellence in designing user-centered interfaces and experiences. This certification highlights my skills in wireframing, prototyping, and applying design thinking to create intuitive and visually cohesive digital products.</p>
+              </div>
+            </div>
+          `;
+          break;
+        case 'web2025':
+          title = 'Proficiency in Web Development 2025 ';
+          content = `
+            <div class="space-y-6">
+              <div class="text-center">
+                <img src="src/web2025.jpg" alt="Certificate of Proficiency in Web Development (Second Award)" class="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg">
+              </div>
+              <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Certification Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div><p class="font-semibold text-gray-700">Certificate Type:</p><p class="text-gray-600">Certificate of Proficiency (Second Award)</p></div>
+                  <div><p class="font-semibold text-gray-700">Issue Date:</p><p class="text-gray-600">June 9, 2025</p></div>
+                  <div><p class="font-semibold text-gray-700">Awarded During:</p><p class="text-gray-600">30th Commencement Exercises</p></div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-800 mb-2">Recognition</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">A reaffirmation of my expertise in web development. This second certification recognizes my advanced understanding and application of modern web technologies, improved coding practices, and commitment to continuous learning and growth in the field.</p>
+              </div>
+            </div>
+          `;
+          break;
+      }
+      modalTitle.textContent = title;
+      modalContent.innerHTML = content;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeCertificateModal() {
+      const modal = document.getElementById('certificateModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+    document.getElementById('certificateModal').addEventListener('click', function(e) {
+      if (e.target === this) closeCertificateModal();
+    });
+  </script>
+</body>
+</html>
+
+
+
